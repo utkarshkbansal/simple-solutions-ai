@@ -20,9 +20,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -30,38 +27,25 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Rotating arrow */
-        .nav-item.dropdown .dropdown-toggle::after {
-            content: '\f107';
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            transition: transform 0.3s ease;
-        }
-
-        .nav-item.dropdown:hover .dropdown-toggle::after {
-            transform: rotate(180deg);
-        }
-
-        .nav-item .dropdown-menu {
-            display: none;
-        }
-
-        .nav-item:hover .dropdown-menu {
+        /* Dropdown hover fix */
+        .nav-item.dropdown:hover .dropdown-menu {
             display: block;
+            margin-top: 0;
         }
 
-        .dropdown-menu {
-            transition: opacity 0.3s ease;
-            opacity: 0;
+        .dropdown-toggle::after {
+            display: inline-block;
+            vertical-align: middle;
+            content: "";
+            border-top: .3em solid;
+            border-right: .3em solid transparent;
+            border-bottom: 0;
+            border-left: .3em solid transparent;
         }
 
-        .nav-item:hover .dropdown-menu {
-            opacity: 1;
+        .dropdown-toggle:hover::after {
+            border-top: 0;
+            border-bottom: .3em solid;
         }
     </style>
 </head>
@@ -79,7 +63,7 @@
             <div class="navbar-nav ms-auto py-0 me-n3">
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <div class="nav-item dropdown">
-                    <a href="about.html" class="nav-link dropdown-toggle active" id="aboutDropdown">About</a>
+                    <a href="about.html" class="nav-link dropdown-toggle active" id="aboutDropdown" role="button">About</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="#who-we-are">Who We Are</a>
                         <a class="dropdown-item" href="#our-mission">Our Mission</a>
