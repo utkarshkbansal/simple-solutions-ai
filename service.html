@@ -39,28 +39,7 @@
     </script>
 
     <style>
-        /* Dropdown hover fix */
-        .nav-item.dropdown:hover .dropdown-menu {
-            display: block;
-            margin-top: 0;
-        }
-
-        .dropdown-toggle::after {
-            display: inline-block;
-            vertical-align: middle;
-            content: "";
-            border-top: .3em solid;
-            border-right: .3em solid transparent;
-            border-bottom: 0;
-            border-left: .3em solid transparent;
-        }
-
-        .dropdown-toggle:hover::after {
-            border-top: 0;
-            border-bottom: .3em solid;
-        }
-
-        /* Remove large gap between content */
+        /* Adjusting content styles for better readability */
         .content-section {
             padding-top: 20px;
             font-size: 1.2em;
@@ -73,82 +52,22 @@
             margin-bottom: 20px;
         }
 
-        .content-section p, .content-section ul {
-            font-size: 1.1em;
-            color: #333;
-        }
-
         .content-section ul {
             list-style-type: disc;
             padding-left: 20px;
         }
 
-        /* Footer styling */
-        .bg-dark {
-            background-color: #003366 !important;
-        }
-
-        .content-section ul li::before {
-            content: "\2022";
-            color: #003366;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
+        .content-section h4 {
+            font-size: 1.4em;
+            margin-top: 15px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 
 <body>
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-        <a href="index.html" class="navbar-brand p-0">
-            <h1 class="m-0 text-uppercase text-primary">Simple Solutions AI</h1>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-0 me-n3">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Capabilities</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="#" class="dropdown-item" onclick="showContent('erp')">ERP Implementation</a>
-                        <a href="#" class="dropdown-item" onclick="showContent('digital')">Digital Transformation</a>
-                        <a href="#" class="dropdown-item" onclick="showContent('cloud')">Cloud Computing</a>
-                        <a href="#" class="dropdown-item" onclick="showContent('analytics')">Business Analytics</a>
-                        <a href="#" class="dropdown-item" onclick="showContent('data')">Data Engineering</a>
-                        <a href="#" class="dropdown-item" onclick="showContent('cyber')">Cybersecurity</a>
-                    </div>
-                </div>
-                <a href="careers.html" class="nav-item nav-link">Careers</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-    <!-- Page Header Start -->
-    <div class="container-fluid bg-dark p-5">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h1 class="display-4 text-white">Capabilities</h1>
-                <a href="index.html">Home</a>
-                <i class="far fa-square text-primary px-2"></i>
-                <span>Capabilities</span>
-            </div>
-        </div>
-    </div>
-    <!-- Page Header End -->
-
     <!-- Capabilities Start -->
     <div class="container-fluid py-6 px-5">
-        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <h1 class="display-5 mb-0">Our Capabilities</h1>
-            <hr class="w-25 mx-auto bg-primary">
-        </div>
         <div class="row g-5" id="capability-boxes">
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-secondary text-center px-5" onclick="showContent('erp')">
@@ -191,10 +110,12 @@
 
     <!-- Detailed Information Section -->
     <div class="container-fluid py-6 px-5">
+        <!-- ERP Implementation -->
         <div id="erp" class="content-section" style="display:none;">
             <h2>ERP Implementation</h2>
-            <p>Simple Solutions AI has a highly-experienced functional and technical Oracle E-Business certified professionals that can support off-the-shelf Oracle packages, customized modules, or legacy applications. We use proven toolsets and methodologies to help assure successful implementations, upgrades, management, and support in on-prem and cloud environments...</p>
-            <h4>Oracle E-Business Suite:</h4>
+            <p>Simple Solutions AI has highly-experienced Oracle E-Business certified professionals who support off-the-shelf Oracle packages, customized modules, or legacy applications. We use proven methodologies to ensure successful implementations, upgrades, management, and support in on-prem and cloud environments. Our AI and GenAI capabilities identify automation candidates to reduce processing time, resulting in timely, accurate financial reporting and increased operational efficiency.</p>
+            <p>Our recruitment team focuses on attracting, qualifying, and retaining top Oracle talent. The right professionals can make the difference between ERP success and failure. We invest in ongoing training to ensure our consultants provide strategic advice on Oracle E-Business best practices.</p>
+            <h4>Oracle E-Business Suite Expertise</h4>
             <ul>
                 <li>Oracle Financials</li>
                 <li>Oracle Public Sector</li>
@@ -203,80 +124,78 @@
                 <li>Oracle Projects Portfolio</li>
                 <li>Oracle Supply Chain Applications</li>
                 <li>Oracle Advanced Procurement</li>
+                <li>Other Oracle E-Business modules</li>
             </ul>
         </div>
 
+        <!-- Digital Transformation -->
         <div id="digital" class="content-section" style="display:none;">
             <h2>Digital Transformation</h2>
-            <p>We provide expertise in user-centric digital platforms combined with human-centered design to enable rapid transformation of your business and drive meaningful results...</p>
+            <p>We specialize in user-centric digital platforms combined with human-centered design to enable rapid transformation and deliver meaningful results. Our consultants provide tailored digital solutions on Salesforce and Pega platforms to optimize performance and enhance user experience.</p>
+            <h4>Services Offered</h4>
             <ul>
-                <li>Planning & Process Design</li>
-                <li>Development</li>
-                <li>Data Migration</li>
-                <li>Integration with ERP and other systems</li>
+                <li><strong>Planning & Process Design:</strong> Strategy and implementation planning for leveraging Salesforce or Pega functionality.</li>
+                <li><strong>Development:</strong> Custom feature development for Salesforce or Pega applications.</li>
+                <li><strong>Data Migration:</strong> Data extraction, cleansing, and integration into new systems.</li>
+                <li><strong>Integration:</strong> Integration of Salesforce or Pega with ERP, financial, and legacy applications.</li>
             </ul>
         </div>
 
+        <!-- Cloud Computing -->
         <div id="cloud" class="content-section" style="display:none;">
             <h2>Cloud Computing</h2>
-            <p>In the fast-changing technology environment, Cloud adoption is at the heart of transforming IT to be more relevant, agile, and deliver more value to the business...</p>
+            <p>In today’s fast-changing technology environment, cloud adoption is essential for agility and value delivery. Our certified cloud architects help clients migrate from on-premise to cloud environments, minimizing disruption and maximizing ROI. We employ a standard Journey to Cloud (J2C) framework with actionable processes for cloud adoption and utilization.</p>
+            <h4>J2C Framework Highlights</h4>
+            <ul>
+                <li>Application Disposition Questionnaire</li>
+                <li>Cloud Migration Planning</li>
+                <li>Cloud Migration Design</li>
+                <li>Cloud Migration Execution</li>
+            </ul>
         </div>
 
+        <!-- Business Analytics -->
         <div id="analytics" class="content-section" style="display:none;">
             <h2>Business Analytics</h2>
-            <p>We provide skilled resources with deep expertise in business analytics through statistical and operational data analysis using AI models...</p>
+            <p>We provide skilled resources with deep expertise in business analytics, statistical and operational data analysis, report generation, and optimization techniques. Our services include the design and development of BI tools and data warehouses, as well as data integration and reporting solutions.</p>
+            <h4>Business Analytics Expertise</h4>
+            <ul>
+                <li>BI Technology Assessment</li>
+                <li>Project Planning</li>
+                <li>Data Integration (ETL) Design</li>
+                <li>Dashboards and Scorecards</li>
+                <li>Reports and Metrics</li>
+            </ul>
         </div>
 
+        <!-- Data Engineering -->
         <div id="data" class="content-section" style="display:none;">
             <h2>Data Engineering</h2>
-            <p>We offer top-notch data architecture consultants that can support your needs and mission...</p>
+            <p>Simple Solutions AI offers expert data architecture consultants to assist with data governance, modeling, quality, and integration. We help businesses manage their data effectively, ensuring security and regulatory compliance across all subject areas.</p>
+            <h4>Key Data Engineering Services</h4>
+            <ul>
+                <li>Data Governance & Data Quality</li>
+                <li>Unstructured Data Integration</li>
+                <li>Data Security & Privacy</li>
+                <li>Metadata Management</li>
+                <li>Database Administration</li>
+            </ul>
         </div>
 
+        <!-- Cybersecurity -->
         <div id="cyber" class="content-section" style="display:none;">
             <h2>Cybersecurity</h2>
-            <p>Our vision for cybersecurity is to provide customers with solutions tailored to their unique business needs...</p>
+            <p>In an era of increased cloud adoption and global accessibility, cybersecurity is paramount. Simple Solutions AI provides security engineers to implement the right architecture, compliance controls, and monitoring systems. Our services include risk assessment, penetration testing, and security audits to help clients mitigate threats and secure IT systems in on-prem and cloud environments.</p>
+            <h4>Cybersecurity Services</h4>
+            <ul>
+                <li>ATO (Authority to Operate) Planning and Certification</li>
+                <li>Penetration Testing & Web Scans</li>
+                <li>Continuous Monitoring & Security Audits</li>
+            </ul>
         </div>
     </div>
     <!-- Capabilities End -->
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-secondary p-5">
-        <div class="row g-5">
-            <div class="col-lg-3 col-md-6">
-                <h3 class="text-white mb-4">Quick Links</h3>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-secondary mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                    <a class="text-secondary mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                    <a class="text-secondary mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Capabilities</a>
-                    <a class="text-secondary mb-2" href="careers.html"><i class="bi bi-arrow-right text-primary me-2"></i>Careers</a>
-                    <a class="text-secondary mb-2" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h3 class="text-white mb-4">Get In Touch</h3>
-                <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>800 Meadowridge Dr, Aurora, IL 60504</p>
-                <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@simplesolutionsAI.com</p>
-                <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+123 456 7890</p>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid bg-dark text-secondary text-center border-top py-4 px-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-        <p class="m-0">&copy; <a class="text-secondary border-bottom" href="#">Simple Solutions AI</a>. All Rights Reserved.</p>
-    </div>
-    <!-- Footer End -->
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
 </body>
 
 </html>
