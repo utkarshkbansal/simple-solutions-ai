@@ -29,15 +29,60 @@
         function showContent(id) {
             var content = document.getElementsByClassName("content-section");
             var boxes = document.getElementById("capability-boxes");
-            // Hide all content sections and remove boxes
             boxes.style.display = "none";
             for (var i = 0; i < content.length; i++) {
                 content[i].style.display = "none";
             }
-            // Display selected content
             document.getElementById(id).style.display = "block";
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
+
+    <style>
+        /* Dropdown hover fix */
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
+
+        .dropdown-toggle::after {
+            display: inline-block;
+            vertical-align: middle;
+            content: "";
+            border-top: .3em solid;
+            border-right: .3em solid transparent;
+            border-bottom: 0;
+            border-left: .3em solid transparent;
+        }
+
+        .dropdown-toggle:hover::after {
+            border-top: 0;
+            border-bottom: .3em solid;
+        }
+
+        /* Remove large gap between content */
+        .content-section {
+            padding-top: 20px;
+        }
+
+        /* Footer styling */
+        .bg-dark {
+            background-color: #003366 !important;
+        }
+
+        .content-section ul {
+            list-style: none;
+        }
+
+        .content-section ul li::before {
+            content: "\2022";
+            color: #003366;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    </style>
 </head>
 
 <body>
@@ -75,7 +120,7 @@
     <div class="container-fluid bg-dark p-5">
         <div class="row">
             <div class="col-12 text-center">
-                <h1 class="display-4 text-white">Our Capabilities</h1>
+                <h1 class="display-4 text-white">Capabilities</h1>
                 <a href="index.html">Home</a>
                 <i class="far fa-square text-primary px-2"></i>
                 <span>Capabilities</span>
@@ -87,51 +132,40 @@
     <!-- Capabilities Start -->
     <div class="container-fluid py-6 px-5">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <h1 class="display-5 mb-0">Our Capabilities</h1>
+            <h1 class="display-5 mb-0">Capabilities</h1>
             <hr class="w-25 mx-auto bg-primary">
         </div>
         <div class="row g-5" id="capability-boxes">
-            <!-- ERP Implementation -->
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-secondary text-center px-5" onclick="showContent('erp')">
                     <h3 class="mb-3">ERP Implementation</h3>
                     <p class="mb-0">Tailored solutions for enterprise resource planning that drive efficiency across key business processes.</p>
                 </div>
             </div>
-
-            <!-- Digital Transformation -->
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-secondary text-center px-5" onclick="showContent('digital')">
                     <h3 class="mb-3">Digital Transformation</h3>
                     <p class="mb-0">Helping businesses evolve through digital innovation, streamlining operations and improving customer engagement.</p>
                 </div>
             </div>
-
-            <!-- Cloud Computing -->
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-secondary text-center px-5" onclick="showContent('cloud')">
                     <h3 class="mb-3">Cloud Computing</h3>
                     <p class="mb-0">Helping clients migrate to cloud environments using a proven roadmap to minimize disruption and maximize ROI.</p>
                 </div>
             </div>
-
-            <!-- Business Analytics -->
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-secondary text-center px-5" onclick="showContent('analytics')">
                     <h3 class="mb-3">Business Analytics</h3>
                     <p class="mb-0">Providing insights through business analytics and optimization techniques to improve decision-making.</p>
                 </div>
             </div>
-
-            <!-- Data Engineering -->
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-secondary text-center px-5" onclick="showContent('data')">
                     <h3 class="mb-3">Data Engineering</h3>
                     <p class="mb-0">We design and optimize data systems that support your organization's need for scalable, actionable insights.</p>
                 </div>
             </div>
-
-            <!-- Cybersecurity -->
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-secondary text-center px-5" onclick="showContent('cyber')">
                     <h3 class="mb-3">Cybersecurity</h3>
@@ -145,9 +179,7 @@
     <div class="container-fluid py-6 px-5">
         <div id="erp" class="content-section" style="display:none;">
             <h2>ERP Implementation</h2>
-            <p>Simple Solutions AI has a highly-experienced functional and technical Oracle E-Business certified professionals that can support off-the-shelf Oracle packages, customized modules, or legacy applications. We use proven toolsets and methodologies to help assure successful implementations, upgrades, management, and support in on-prem and cloud environments. We leverage AI and GenAI capabilities to identify automation candidates to reduce processing time within the financial lifecycle, resulting in better timely, accurate financial reporting and increased operational efficiencies.</p>
-            <p>The primary focus of our recruiting team is to attract, qualify, and retain top Oracle talent within the firm. We can find you the certified professionals that you need to complete your mission-critical needs and initiatives.</p>
-            <p>Our resources are our assets, and we continue to invest in them through additional training and education to ensure their skills provide you with a consultant who can strategically advise you on current and future Oracle E-Business best practices.</p>
+            <p>Simple Solutions AI has a highly-experienced functional and technical Oracle E-Business certified professionals that can support off-the-shelf Oracle packages, customized modules, or legacy applications. We use proven toolsets and methodologies to help assure successful implementations, upgrades, management, and support in on-prem and cloud environments...</p>
             <h4>Oracle E-Business Suite:</h4>
             <ul>
                 <li>Oracle Financials</li>
@@ -157,15 +189,12 @@
                 <li>Oracle Projects Portfolio</li>
                 <li>Oracle Supply Chain Applications</li>
                 <li>Oracle Advanced Procurement</li>
-                <li>Other E-Business Modules</li>
-                <li>Oracle-Business Administrators (All Modules)</li>
             </ul>
         </div>
 
         <div id="digital" class="content-section" style="display:none;">
             <h2>Digital Transformation</h2>
-            <p>We provide expertise in user-centric digital platforms combined with human-centered design to enable rapid transformation of your business and drive meaningful results. Simple Solutions AI has highly experienced consultants delivering customized digital solutions on Salesforce and Pega platforms that optimize performance, better user experience, and enhance overall experience to our clients.</p>
-            <h4>Our consultants offer services for:</h4>
+            <p>We provide expertise in user-centric digital platforms combined with human-centered design to enable rapid transformation of your business and drive meaningful results...</p>
             <ul>
                 <li>Planning & Process Design</li>
                 <li>Development</li>
@@ -176,29 +205,22 @@
 
         <div id="cloud" class="content-section" style="display:none;">
             <h2>Cloud Computing</h2>
-            <p>In the fast-changing technology environment, Cloud adoption is at the heart of transforming IT to be more relevant, agile, and deliver more value to the business. Simple Solutions AI offers certified cloud architects and engineers with years of experience in helping clients migrate from on-prem to cloud environments by defining the right cloud strategy and a roadmap for the journey to the cloud (J2C) in a phased manner that minimizes disruption to the business and maximizes return on investment.</p>
-            <h4>Key phases of our J2C framework include:</h4>
-            <ul>
-                <li>Application disposition questionnaire</li>
-                <li>Cloud migration planning – application inventory, schedule, cost</li>
-                <li>Cloud migration design – detailed plan and sequencing of activities</li>
-                <li>Cloud migration execution – implementation and validation</li>
-            </ul>
+            <p>In the fast-changing technology environment, Cloud adoption is at the heart of transforming IT to be more relevant, agile, and deliver more value to the business...</p>
         </div>
 
         <div id="analytics" class="content-section" style="display:none;">
             <h2>Business Analytics</h2>
-            <p>We provide skilled resources with deep expertise in business analytics through statistical and operational data analysis using AI models. Our consultants have been providing a range of services, including BI Technology Assessment, Data Modeling, and Reporting and Metrics generation, to help organizations make data-driven decisions.</p>
+            <p>We provide skilled resources with deep expertise in business analytics through statistical and operational data analysis using AI models...</p>
         </div>
 
         <div id="data" class="content-section" style="display:none;">
             <h2>Data Engineering</h2>
-            <p>We offer top-notch data architecture consultants that can support your needs and mission. Our consultants are skilled in data governance, data quality, ETL processes, unstructured data integration, metadata management, and more to optimize the availability and usage of critical business data.</p>
+            <p>We offer top-notch data architecture consultants that can support your needs and mission...</p>
         </div>
 
         <div id="cyber" class="content-section" style="display:none;">
             <h2>Cybersecurity</h2>
-            <p>Our vision for cybersecurity is to provide customers with solutions tailored to their unique business needs and aligned with their mission. We offer comprehensive security services, including ATO (Authority to Operate) planning, penetration testing, continuous monitoring, and security audits, to proactively manage and mitigate IT risks.</p>
+            <p>Our vision for cybersecurity is to provide customers with solutions tailored to their unique business needs...</p>
         </div>
     </div>
     <!-- Capabilities End -->
