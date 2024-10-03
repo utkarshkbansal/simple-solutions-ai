@@ -34,6 +34,35 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Rotating arrow */
+        .nav-item.dropdown .dropdown-toggle::after {
+            content: '\f107';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-item.dropdown:hover .dropdown-toggle::after {
+            transform: rotate(180deg);
+        }
+
+        .nav-item .dropdown-menu {
+            display: none;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -50,11 +79,11 @@
             <div class="navbar-nav ms-auto py-0 me-n3">
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <div class="nav-item dropdown">
-                    <a href="about.html" class="nav-link dropdown-toggle active" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
-                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                        <li><a class="dropdown-item" href="#who-we-are">Who We Are</a></li>
-                        <li><a class="dropdown-item" href="#our-mission">Our Mission</a></li>
-                    </ul>
+                    <a href="about.html" class="nav-link dropdown-toggle active" id="aboutDropdown">About</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#who-we-are">Who We Are</a>
+                        <a class="dropdown-item" href="#our-mission">Our Mission</a>
+                    </div>
                 </div>
                 <a href="service.html" class="nav-item nav-link">Capabilities</a>
                 <a href="careers.html" class="nav-item nav-link">Careers</a>
