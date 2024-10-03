@@ -6,7 +6,7 @@
     <title>Capabilities - Simple Solutions AI</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Simple Solutions AI" name="keywords">
-    <meta content="Simple Solutions AI offers a range of capabilities including ERP Implementation, Digital Transformation, and Data Engineering." name="description">
+    <meta content="Simple Solutions AI offers a range of capabilities including ERP Implementation, Digital Transformation, Cloud Computing, Business Analytics, Data Engineering, and Cybersecurity." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -14,7 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -28,13 +28,24 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <script>
+        function toggleDetails(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
 </head>
 
 <body>
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
         <a href="index.html" class="navbar-brand p-0">
-            <h1 class="m-0 text-uppercase text-primary"><i class="far fa-smile text-primary me-2"></i>Simple Solutions AI</h1>
+            <h1 class="m-0 text-uppercase text-primary">Simple Solutions AI</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -51,7 +62,6 @@
     </nav>
     <!-- Navbar End -->
 
-
     <!-- Page Header Start -->
     <div class="container-fluid bg-dark p-5">
         <div class="row">
@@ -64,7 +74,6 @@
         </div>
     </div>
     <!-- Page Header End -->
-    
 
     <!-- Capabilities Start -->
     <div class="container-fluid py-6 px-5">
@@ -73,37 +82,107 @@
             <hr class="w-25 mx-auto bg-primary">
         </div>
         <div class="row g-5">
+
+            <!-- ERP Implementation -->
             <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-secondary text-center px-5">
-                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                        <i class="fa fa-user-tie fa-2x"></i>
-                    </div>
+                <div class="service-item bg-secondary text-center px-5" onclick="toggleDetails('erp')">
                     <h3 class="mb-3">ERP Implementation</h3>
                     <p class="mb-0">Tailored solutions for enterprise resource planning that drive efficiency across key business processes.</p>
+                    <div id="erp" style="display: none;">
+                        <p>Simple Solutions AI has a highly-experienced functional and technical Oracle E-Business certified professionals that can support off-the-shelf Oracle packages, customized modules, or legacy applications...</p>
+                        <ul>
+                            <li>Oracle Financials</li>
+                            <li>Oracle Public Sector</li>
+                            <li>Oracle Human Resource Management System</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
+            <!-- Digital Transformation -->
             <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-secondary text-center px-5">
-                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                        <i class="fa fa-chart-line fa-2x"></i>
-                    </div>
+                <div class="service-item bg-secondary text-center px-5" onclick="toggleDetails('digital')">
                     <h3 class="mb-3">Digital Transformation</h3>
                     <p class="mb-0">Helping businesses evolve through digital innovation, streamlining operations and improving customer engagement.</p>
+                    <div id="digital" style="display: none;">
+                        <p>We provide expertise in user-centric digital platforms combined with human-centered design to enable rapid transformation of your business and drive meaningful results...</p>
+                        <ul>
+                            <li>Planning & Process Design</li>
+                            <li>Development</li>
+                            <li>Data Migration</li>
+                            <li>Integration</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
+            <!-- Cloud Computing -->
             <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-secondary text-center px-5">
-                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                        <i class="fa fa-database fa-2x"></i>
+                <div class="service-item bg-secondary text-center px-5" onclick="toggleDetails('cloud')">
+                    <h3 class="mb-3">Cloud Computing</h3>
+                    <p class="mb-0">Helping clients migrate to cloud environments using a proven roadmap to minimize disruption and maximize ROI.</p>
+                    <div id="cloud" style="display: none;">
+                        <p>Our certified cloud architects and engineers help clients define cloud strategies and roadmap their migration journeys...</p>
+                        <ul>
+                            <li>Cloud Migration Planning</li>
+                            <li>Cloud Migration Design</li>
+                            <li>Cloud Migration Execution</li>
+                        </ul>
                     </div>
+                </div>
+            </div>
+
+            <!-- Business Analytics -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5" onclick="toggleDetails('analytics')">
+                    <h3 class="mb-3">Business Analytics</h3>
+                    <p class="mb-0">Providing insights through business analytics and optimization techniques to improve decision-making.</p>
+                    <div id="analytics" style="display: none;">
+                        <p>Our consultants have expertise in business analytics through statistical and operational data analysis using AI models...</p>
+                        <ul>
+                            <li>BI Technology Assessment</li>
+                            <li>Project Planning</li>
+                            <li>Data Integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Engineering -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5" onclick="toggleDetails('data')">
                     <h3 class="mb-3">Data Engineering</h3>
                     <p class="mb-0">We design and optimize data systems that support your organization's need for scalable, actionable insights.</p>
+                    <div id="data" style="display: none;">
+                        <p>Our consultants have extensive experience supporting data architecture, governance, modeling, integration, and security...</p>
+                        <ul>
+                            <li>Data Governance</li>
+                            <li>Data Quality</li>
+                            <li>Master Data Management</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
+            <!-- Cybersecurity -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5" onclick="toggleDetails('cyber')">
+                    <h3 class="mb-3">Cybersecurity</h3>
+                    <p class="mb-0">Comprehensive security services to manage and mitigate IT risks in both on-prem and cloud environments.</p>
+                    <div id="cyber" style="display: none;">
+                        <p>Our resources are well-versed in providing comprehensive cybersecurity services, including penetration testing, continuous monitoring...</p>
+                        <ul>
+                            <li>ATO Planning</li>
+                            <li>Penetration Testing</li>
+                            <li>Security Audits</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <!-- Capabilities End -->
-
 
     <!-- Footer Start -->
     <div class="container-fluid bg-primary text-secondary p-5">
@@ -114,7 +193,7 @@
                     <a class="text-secondary mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
                     <a class="text-secondary mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
                     <a class="text-secondary mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Capabilities</a>
-                    <a class="text-secondary mb-2" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                    <a class="text-secondary" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
@@ -122,14 +201,6 @@
                 <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>800 Meadowridge Dr, Aurora, IL 60504</p>
                 <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@simplesolutionsAI.com</p>
                 <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+123 456 7890</p>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h3 class="text-white mb-4">Follow Us</h3>
-                <div class="d-flex">
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                </div>
             </div>
         </div>
     </div>
