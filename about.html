@@ -28,6 +28,13 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,7 +49,13 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0 me-n3">
                 <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link active">About</a>
+                <div class="nav-item dropdown">
+                    <a href="about.html" class="nav-link dropdown-toggle active" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                        <li><a class="dropdown-item" href="#who-we-are">Who We Are</a></li>
+                        <li><a class="dropdown-item" href="#our-mission">Our Mission</a></li>
+                    </ul>
+                </div>
                 <a href="service.html" class="nav-item nav-link">Capabilities</a>
                 <a href="careers.html" class="nav-item nav-link">Careers</a>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -65,7 +78,7 @@
     <!-- Page Header End -->
 
     <!-- About Us Start -->
-    <div class="container-fluid bg-secondary p-0">
+    <div class="container-fluid bg-secondary p-0" id="who-we-are">
         <div class="row g-0">
             <div class="col-lg-6 py-6 px-5">
                 <h1 class="display-5 mb-4">Who We Are</h1>
@@ -74,14 +87,14 @@
                 <a href="service.html" class="btn btn-primary py-md-3 px-md-5 rounded-pill">Our Capabilities</a>
             </div>
             <div class="col-lg-6">
-                <img class="img-fluid w-100 h-100" src="img/blog-3.jpg" alt="About Us">
+                <img class="img-fluid w-100 h-100" src="img/about-us.jpg" alt="About Us">
             </div>
         </div>
     </div>
     <!-- About Us End -->
 
     <!-- Our Mission Start -->
-    <div class="container-fluid py-6 px-5">
+    <div class="container-fluid py-6 px-5" id="our-mission">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
             <h1 class="display-5 mb-0">Our Mission</h1>
             <hr class="w-25 mx-auto bg-primary">
