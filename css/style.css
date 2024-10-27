@@ -78,3 +78,8 @@
     transform: scale(1.05);
     border: 2px solid var(--primary); /* Light blue border on hover */
 }
+
+.text-primary {
+    color: #87CEEB !important; /* Override default primary color */
+}
+
